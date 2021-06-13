@@ -1,0 +1,60 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Valorant Random Agent Picker</title>
+</head>
+
+<body bgcolor="#111111" link="#FFFFFF" vlink="#FFFFFF" alink="#AAAAAA">
+
+    <center>
+        <font size = "7"color="#ff4654">
+            <p>Random Agent Picker</p>
+        </font>
+    </center>
+
+
+    <center>
+        <script>
+            var AgentList = new Array
+            (
+            "Image/Jett.png",
+            "Image/Killjoy.png",
+            "Image/Brimstone.png",
+            "Image/Astra.png",
+            "Image/Viper.png",
+            "Image/Sova.png",
+            "Image/Cypher.png",
+            "Image/Phoenix.png",
+            "Image/Yoru.png",
+            "Image/Raze.png",
+            "Image/Skye.png",
+            "Image/Reyna.png",
+            "Image/Omen.png",
+            "Image/Sage.png",
+            "Image/Breach.png" 
+            );
+
+            var index = Math.floor(Math.random() * AgentList.length);
+            var printHtml = '<img src=' + AgentList[index] + ' width="326px" height="500px" >';
+            document.write(printHtml);
+        </script>
+    </center>
+
+    <br>
+
+    <br>
+
+    <!-- <center>
+        <font size = "5" color="#FFFFFF">
+            <a href="index.html" style="text-decoration:none;">Start</a>
+        </font>
+    </center> -->
+
+    <center>
+        <input type="button" value="START" onClick="location.href='index.html'" style="width:175px; height:45px; background-color: #ff4654; color:#effefe;"">
+    </center>
+
+</body>
+
+</html>
