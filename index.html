@@ -5,7 +5,7 @@
     <title>Random Agent Picker</title>
 </head>
 
-<body bgcolor="#111111" link="#FFFFFF" vlink="#FFFFFF" alink="#AAAAAA">
+<body bgcolor="#111111" link="#FFFFFF" vlink="#FFFFFF" alink="#AAAAAA" style="font-family:sans-serif;">
 
     <center>
         <font size = "7"color="#ff4654">
@@ -13,10 +13,9 @@
         </font>
     </center>
 
-
     <center>
         <script>
-            var AgentList = new Array
+            var AgentImageList = new Array
             (
             "Image/Jett.png",
             "Image/Killjoy.png",
@@ -35,9 +34,32 @@
             "Image/Breach.png" 
             );
 
-            var index = Math.floor(Math.random() * AgentList.length);
-            var printHtml = '<img src=' + AgentList[index] + ' width="326px" height="500px" >';
-            document.write(printHtml);
+            var AgentNameList = new Array
+            (
+            "Jett",
+            "Killjoy",
+            "Brimstone",
+            "Astra",
+            "Viper",
+            "Sova",
+            "Cypher",
+            "Phoenix",
+            "Yoru",
+            "Raze",
+            "Skye",
+            "Reyna",
+            "Omen",
+            "Sage",
+            "Breach" 
+            );
+
+            var index = Math.floor(Math.random() * AgentImageList.length);
+
+            var printHtml1 = '<img src=' + AgentImageList[index] + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
+            document.write(printHtml1);
+
+            var printHtml2 = '<br>' + '<font size = "3" color="#effefe">' + AgentNameList[index] + '</font>';
+            document.write(printHtml2);
         </script>
     </center>
 
@@ -45,11 +67,7 @@
 
     <br>
 
-    <!-- <center>
-        <font size = "5" color="#FFFFFF">
-            <a href="index.html" style="text-decoration:none;">Start</a>
-        </font>
-    </center> -->
+    <br>
 
     <center>
         <input type="button" value="START" onClick="location.href='index.html'" style="width:175px; height:45px; background-color: #ff4654; color:#effefe;"">
