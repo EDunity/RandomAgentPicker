@@ -3,21 +3,30 @@
   <head>
     <title>Random Agent Picker</title>
     <meta charset="utf-8">
-
   </head>
   <body bgcolor="#111111" style="font-family:sans-serif;">
 
-    <center>
+    <div align="center" style="margin-top:0px;">
       <font size = "7"color="#ff4654">
         ・Random Agent Picker・
       </font>
-    </center>
+    </div>
 
     <hr>
 
-    <br>
+    <div align="center" style="margin-top:20px;">
+      <font id="OutPutHTML1">
+        <img src="Image/Null.png" width="326px" height="500px" style="border:2px solid #ff4654;">
+        <br><font size="3"  color="#effefe">STARTボタンを押してください。</font>
+      </font>
 
-    <div align="center" style="margin-left:0px;">
+      <font id="OutPutHTML2">
+      </font>
+      <p id="OutPutHTML3">
+      </p>
+    </div>
+
+    <div align="center" style="margin-top:30px;">
 
       <div align="left" style="display:inline-block; vertical-align:top; margin-left:50px;">
         <font size = "5"color="#effefe">・DUELIST</font><br>
@@ -26,10 +35,12 @@
           <input type="checkbox" class="Duelist" value="Jett" checked="checked"><font size="3" color="#effefe">Jett</font><br>
           <input type="checkbox" class="Duelist" value="Phoenix" checked="checked"><font size="3" color="#effefe">Phoenix</font><br>
           <input type="checkbox" class="Duelist" value="Yoru" checked="checked"><font size="3" color="#effefe">Yoru</font><br>
-          <input type="checkbox" class="Duelist" value="Raze" checked="checked"><font size="3" color="#effefe">Raze</font><br><br>
+          <input type="checkbox" class="Duelist" value="Raze" checked="checked"><font size="3" color="#effefe">Raze</font><br>
           <div align="left" style="margin-left:5px;">
-            <input type="button" onClick="DuelistAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
-            <input type="button" onClick="DuelistNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            <div align="left" style="margin-top:10px;">
+              <input type="button" onClick="DuelistAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
+              <input type="button" onClick="DuelistNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            </div>
           </div>  
         </div>
       </div>
@@ -40,10 +51,12 @@
           <input type="checkbox" class="Controller" value="Brimstone" checked="checked"><font size="3" color="#effefe">BrimStone</font><br>
           <input type="checkbox" class="Controller" value="Omen" checked="checked"><font size="3" color="#effefe">Omen</font><br>
           <input type="checkbox" class="Controller" value="Viper" checked="checked"><font size="3" color="#effefe">Viper</font><br>
-          <input type="checkbox" class="Controller" value="Astra" checked="checked"><font size="3" color="#effefe">Astra</font><br><br>
+          <input type="checkbox" class="Controller" value="Astra" checked="checked"><font size="3" color="#effefe">Astra</font><br>
           <div align="left" style="margin-left:5px;">
-            <input type="button" onClick="ControllerAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
-            <input type="button" onClick="ControllerNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            <div align="left" style="margin-top:10px;">
+              <input type="button" onClick="ControllerAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
+              <input type="button" onClick="ControllerNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            </div>  
           </div>  
         </div>
       </div>
@@ -53,10 +66,12 @@
         <div align="left" style="margin-left:22px;">
           <input type="checkbox" class="Sentinel" value="Sage" checked="checked"><font size="3" color="#effefe">Sage</font><br>
           <input type="checkbox" class="Sentinel" value="Cypher" checked="checked"><font size="3" color="#effefe">Cyper</font><br>
-          <input type="checkbox" class="Sentinel" value="Killjoy" checked="checked"><font size="3" color="#effefe">Killjoy</font><br><br>
+          <input type="checkbox" class="Sentinel" value="Killjoy" checked="checked"><font size="3" color="#effefe">Killjoy</font><br>
           <div align="left" style="margin-left:5px;">
-          <input type="button" onClick="SentinelAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
-          <input type="button" onClick="SentinelNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            <div align="left" style="margin-top:10px;">
+              <input type="button" onClick="SentinelAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
+              <input type="button" onClick="SentinelNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            </div>  
           </div>  
         </div>  
       </div>
@@ -66,36 +81,27 @@
         <div align="left" style="margin-left:22px;">
           <input type="checkbox" class="Initiator" value="Sova" checked="checked"><font size="3" color="#effefe">Sova</font><br>
           <input type="checkbox" class="Initiator" value="Breach" checked="checked"><font size="3" color="#effefe">Breach</font><br>
-          <input type="checkbox" class="Initiator" value="Skye" checked="checked"><font size="3" color="#effefe">Skye</font><br><br>
+          <input type="checkbox" class="Initiator" value="Skye" checked="checked"><font size="3" color="#effefe">Skye</font><br>
           <div align="left" style="margin-left:5px;">
-            <input type="button" onClick="InitiatorAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
-            <input type="button" onClick="InitiatorNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
-          </div>  
+            <div align="left" style="margin-top:10px;">
+              <input type="button" onClick="InitiatorAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
+              <input type="button" onClick="InitiatorNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            </div>  
+          </div>
         </div>
       </div>
 
     </div>
 
-    <br>
+    <div align="center" style="margin-top:30px;">
+      <input type="button" value="START" onClick="Start()" style="width:175px; height:45px; background-color:#ff4654; color:#effefe; -webkit-appearance:none;">
+    </br>
 
-    <center>
-    <input type="button" value="START" onClick="Start()" style="width:175px; height:45px; background-color:#ff4654; color:#effefe; -webkit-appearance:none;">
-    </center>
-
-    <br>
-
-    <center>
-      <font id="OutPutHTML1">
-        <img src="Image/Null.png" width="326px" height="500px" style="border:2px solid #ff4654;">
-        <br><font size="3"  color="#effefe">STARTボタンを押してください。</font>
-      </font>
-
-      <font id="OutPutHTML2">
-      </font>
-
-      <p id="OutPutHTML3">
-      </p>
-    </center>
+    <div align="center" style="margin-top:500px;">
+      <hr>
+      <div align="left" style="margin-top:200px;">
+      </div>
+    </div>
 
     <script>
 
