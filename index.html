@@ -6,24 +6,22 @@
   </head>
   <body bgcolor="#111111" style="font-family:sans-serif;">
 
+    <!-- タイトル -->
     <div align="center" style="margin-top:0px;">
       <font size = "7"color="#ff4654">
         ・Random Agent Picker・
       </font>
+      <hr>
     </div>
-
-    <hr>
+    <!-- タイトル -->
 
     <div align="center" style="margin-top:20px;">
       <font id="OutPutHTML1">
         <img src="Image/Null.png" width="326px" height="500px" style="border:2px solid #ff4654;">
         <br><font size="3"  color="#effefe">STARTボタンを押してください。</font>
       </font>
-
       <font id="OutPutHTML2">
       </font>
-      <p id="OutPutHTML3">
-      </p>
     </div>
 
     <div align="center" style="margin-top:30px;">
@@ -97,156 +95,171 @@
       <input type="button" value="START" onClick="Start()" style="width:175px; height:45px; background-color:#ff4654; color:#effefe; -webkit-appearance:none;">
     </br>
 
+    <!-- プロフィール -->
     <div align="center" style="margin-top:500px;">
       <hr>
-      <div align="left" style="margin-top:200px;">
+      <div align="center" style="margin-top:20px;">
+        <img src="Image/EDunity.png" width="200px" height="200px" style="border-radius: 100px;">
+        <br>
+        <font size = "5"color="#effefe">
+          TRI EDunity
+        </font>
+        <br>
+        <div align="left" style="margin:5px 0px 10px 0px; width:450px;">
+          <font size = "3"color="#effefe">
+            Valorantで芋帯をうろうろしてるブリム専です。一緒にランク/アンレやってくれるフレンドを募集しています。Valorant/TitanFall2/黒い砂漠
+          </font>
+        </div>
+        <div align="center" style="margin:5px 0px 100px 0px">
+          <a href="https://twitter.com/ValoAddiction" target=”_blank”><img src="Image/Twitter.png" width="40px" height="40px" style="border-radius: 30px;"></a>
+          <a href="https://www.twitch.tv/edunity" target=”_blank”><img src="Image/Twitch.png" width="40px" height="40px" style="border-radius: 30px;"></a>
+        </div>
       </div>
     </div>
+    <!-- プロフィール -->
 
     <script>
-
-    function DuelistAll()
-    {
-      var DuelistList = document.getElementsByClassName("Duelist");
-      for(i = 0; i < DuelistList.length; i++)
+      function DuelistAll()
       {
-        DuelistList[i].checked = true;
-      }
-    }
-
-    function ControllerAll()
-    {
-      var ControllerList = document.getElementsByClassName("Controller");
-      for(i = 0; i < ControllerList.length; i++)
-      {
-        ControllerList[i].checked = true;
-      }
-    }
-
-    function SentinelAll()
-    {
-      var SentinelList = document.getElementsByClassName("Sentinel");
-      for(i = 0; i < SentinelList.length; i++)
-      {
-        SentinelList[i].checked = true;
-      }
-    }
-
-    function InitiatorAll()
-    {
-      var InitiatorList = document.getElementsByClassName("Initiator");
-      for(i = 0; i < InitiatorList.length; i++)
-      {
-        InitiatorList[i].checked = true;
-      }
-    }
-
-    function DuelistNotAll()
-    {
-      var DuelistList = document.getElementsByClassName("Duelist");
-      for(i = 0; i < DuelistList.length; i++)
-      {
-        DuelistList[i].checked = false;
-      }
-    }
-
-    function ControllerNotAll()
-    {
-      var ControllerList = document.getElementsByClassName("Controller");
-      for(i = 0; i < ControllerList.length; i++)
-      {
-        ControllerList[i].checked = false;
-      }
-    }
-
-    function SentinelNotAll()
-    {
-      var SentinelList = document.getElementsByClassName("Sentinel");
-      for(i = 0; i < SentinelList.length; i++)
-      {
-        SentinelList[i].checked = false;
-      }
-    }
-
-    function InitiatorNotAll()
-    {
-      var InitiatorList = document.getElementsByClassName("Initiator");
-      for(i = 0; i < InitiatorList.length; i++)
-      {
-        InitiatorList[i].checked = false;
-      }
-    }
-
-	  function Start()
-    {
-      var AgentList = [];
-
-      var DuelistList = document.getElementsByClassName("Duelist");
-      for(i = 0; i < DuelistList.length; i++)
-      {
-        if(DuelistList[i].checked)
+        var DuelistList = document.getElementsByClassName("Duelist");
+        for(i = 0; i < DuelistList.length; i++)
         {
-          AgentList.push(DuelistList[i].value);
+          DuelistList[i].checked = true;
         }
       }
 
-      var ControllerList = document.getElementsByClassName("Controller");
-      for(i = 0; i < ControllerList.length; i++)
+      function ControllerAll()
       {
-        if(ControllerList[i].checked)
+        var ControllerList = document.getElementsByClassName("Controller");
+        for(i = 0; i < ControllerList.length; i++)
         {
-          AgentList.push(ControllerList[i].value);
+          ControllerList[i].checked = true;
         }
       }
 
-      var SentinelList = document.getElementsByClassName("Sentinel");
-      for(i = 0; i < SentinelList.length; i++)
+      function SentinelAll()
       {
-        if(SentinelList[i].checked)
+        var SentinelList = document.getElementsByClassName("Sentinel");
+        for(i = 0; i < SentinelList.length; i++)
         {
-          AgentList.push(SentinelList[i].value);
+          SentinelList[i].checked = true;
         }
       }
 
-      var InitiatorList = document.getElementsByClassName("Initiator");
-      for(i = 0; i < InitiatorList.length; i++)
+      function InitiatorAll()
       {
-        if(InitiatorList[i].checked)
+        var InitiatorList = document.getElementsByClassName("Initiator");
+        for(i = 0; i < InitiatorList.length; i++)
         {
-          AgentList.push(InitiatorList[i].value);
+          InitiatorList[i].checked = true;
         }
       }
 
-      var Index = Math.floor(Math.random() * AgentList.length);
-
-      var AgentImage = "";
-      var OutPut1 = "";
-
-      var AgentName = "";
-      var OutPut2 = "";
-
-      if(AgentList.length == 0)
+      function DuelistNotAll()
       {
-        AgentImage = "Image/Null.png";
-        OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
-        OutPutHTML1.innerHTML = OutPut1;
-
-        AgentName = "エージェントを選択してください。";
-        OutPut2 = '<br>' + '<font size="3"  color="#effefe">' + AgentName + '</font>';
-        OutPutHTML2.innerHTML = OutPut2;
+        var DuelistList = document.getElementsByClassName("Duelist");
+        for(i = 0; i < DuelistList.length; i++)
+        {
+          DuelistList[i].checked = false;
+        }
       }
-      else
+
+      function ControllerNotAll()
       {
-        AgentImage = "Image/" + AgentList[Index] + ".png";
-        OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
-        OutPutHTML1.innerHTML = OutPut1;
-
-        AgentName = AgentList[Index];
-        OutPut2 = '<br>' + '<font size="3"  color="#effefe">' + AgentName + '</font>';
-        OutPutHTML2.innerHTML = OutPut2;
+        var ControllerList = document.getElementsByClassName("Controller");
+        for(i = 0; i < ControllerList.length; i++)
+        {
+          ControllerList[i].checked = false;
+        }
       }
-	  }
-    
+
+      function SentinelNotAll()
+      {
+        var SentinelList = document.getElementsByClassName("Sentinel");
+        for(i = 0; i < SentinelList.length; i++)
+        {
+          SentinelList[i].checked = false;
+        }
+      }
+
+      function InitiatorNotAll()
+      {
+        var InitiatorList = document.getElementsByClassName("Initiator");
+        for(i = 0; i < InitiatorList.length; i++)
+        {
+          InitiatorList[i].checked = false;
+        }
+      }
+
+      function Start()
+      {
+        var AgentList = [];
+
+        var DuelistList = document.getElementsByClassName("Duelist");
+        for(i = 0; i < DuelistList.length; i++)
+        {
+          if(DuelistList[i].checked)
+          {
+            AgentList.push(DuelistList[i].value);
+          }
+        }
+
+        var ControllerList = document.getElementsByClassName("Controller");
+        for(i = 0; i < ControllerList.length; i++)
+        {
+          if(ControllerList[i].checked)
+          {
+            AgentList.push(ControllerList[i].value);
+          }
+        }
+
+        var SentinelList = document.getElementsByClassName("Sentinel");
+        for(i = 0; i < SentinelList.length; i++)
+        {
+          if(SentinelList[i].checked)
+          {
+            AgentList.push(SentinelList[i].value);
+          }
+        }
+
+        var InitiatorList = document.getElementsByClassName("Initiator");
+        for(i = 0; i < InitiatorList.length; i++)
+        {
+          if(InitiatorList[i].checked)
+          {
+            AgentList.push(InitiatorList[i].value);
+          }
+        }
+
+        var Index = Math.floor(Math.random() * AgentList.length);
+
+        var AgentImage = "";
+        var OutPut1 = "";
+
+        var AgentName = "";
+        var OutPut2 = "";
+
+        if(AgentList.length == 0)
+        {
+          AgentImage = "Image/Null.png";
+          OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
+          OutPutHTML1.innerHTML = OutPut1;
+
+          AgentName = "エージェントを選択してください。";
+          OutPut2 = '<br>' + '<font size="3"  color="#effefe">' + AgentName + '</font>';
+          OutPutHTML2.innerHTML = OutPut2;
+        }
+        else
+        {
+          AgentImage = "Image/" + AgentList[Index] + ".png";
+          OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
+          OutPutHTML1.innerHTML = OutPut1;
+
+          AgentName = AgentList[Index];
+          OutPut2 = '<br>' + '<font size="3"  color="#effefe">' + AgentName + '</font>';
+          OutPutHTML2.innerHTML = OutPut2;
+        }
+      }
     </script>
   </body>
 </html>
