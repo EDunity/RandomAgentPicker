@@ -1,60 +1,265 @@
-﻿<html>
-
-<head>
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <title>Random Agent Picker</title>
     <meta charset="utf-8">
-    <title>Valorant Random Agent Picker</title>
-</head>
+  </head>
+  <body bgcolor="#111111" style="font-family:sans-serif;">
 
-<body bgcolor="#111111" link="#FFFFFF" vlink="#FFFFFF" alink="#AAAAAA">
+    <!-- タイトル -->
+    <div align="center" style="margin-top:0px;">
+      <font size = "7"color="#ff4654">
+        ・Random Agent Picker・
+      </font>
+      <hr>
+    </div>
+    <!-- タイトル -->
 
-    <center>
-        <font size = "7"color="#ff4654">
-            <p>Random Agent Picker</p>
+    <div align="center" style="margin-top:20px;">
+      <font id="OutPutHTML1">
+        <img src="Image/Null.png" width="326px" height="500px" style="border:2px solid #ff4654;">
+        <br><font size="3"  color="#effefe">STARTボタンを押してください。</font>
+      </font>
+      <font id="OutPutHTML2">
+      </font>
+    </div>
+
+    <div align="center" style="margin-top:30px;">
+
+      <div align="left" style="display:inline-block; vertical-align:top; margin-left:50px;">
+        <font size = "5"color="#effefe">・DUELIST</font><br>
+        <div align="left" style="margin-left:22px;">
+          <input type="checkbox" class="Duelist" value="Reyna" checked="checked"><font size="3" color="#effefe">Reyna</font><br>
+          <input type="checkbox" class="Duelist" value="Jett" checked="checked"><font size="3" color="#effefe">Jett</font><br>
+          <input type="checkbox" class="Duelist" value="Phoenix" checked="checked"><font size="3" color="#effefe">Phoenix</font><br>
+          <input type="checkbox" class="Duelist" value="Yoru" checked="checked"><font size="3" color="#effefe">Yoru</font><br>
+          <input type="checkbox" class="Duelist" value="Raze" checked="checked"><font size="3" color="#effefe">Raze</font><br>
+          <div align="left" style="margin-left:5px;">
+            <div align="left" style="margin-top:10px;">
+              <input type="button" onClick="DuelistAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
+              <input type="button" onClick="DuelistNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            </div>
+          </div>  
+        </div>
+      </div>
+
+      <div align="left" style="display:inline-block; vertical-align:top; margin-left:50px;">
+        <font size = "5"color="#effefe">・CONTROLLER</font><br>
+        <div align="left" style="margin-left:22px;">
+          <input type="checkbox" class="Controller" value="Brimstone" checked="checked"><font size="3" color="#effefe">BrimStone</font><br>
+          <input type="checkbox" class="Controller" value="Omen" checked="checked"><font size="3" color="#effefe">Omen</font><br>
+          <input type="checkbox" class="Controller" value="Viper" checked="checked"><font size="3" color="#effefe">Viper</font><br>
+          <input type="checkbox" class="Controller" value="Astra" checked="checked"><font size="3" color="#effefe">Astra</font><br>
+          <div align="left" style="margin-left:5px;">
+            <div align="left" style="margin-top:10px;">
+              <input type="button" onClick="ControllerAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
+              <input type="button" onClick="ControllerNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            </div>  
+          </div>  
+        </div>
+      </div>
+
+      <div align="left" style="display:inline-block; vertical-align:top; margin-left:50px;">
+        <font size = "5"color="#effefe">・SENTINEL</font><br>
+        <div align="left" style="margin-left:22px;">
+          <input type="checkbox" class="Sentinel" value="Sage" checked="checked"><font size="3" color="#effefe">Sage</font><br>
+          <input type="checkbox" class="Sentinel" value="Cypher" checked="checked"><font size="3" color="#effefe">Cyper</font><br>
+          <input type="checkbox" class="Sentinel" value="Killjoy" checked="checked"><font size="3" color="#effefe">Killjoy</font><br>
+          <div align="left" style="margin-left:5px;">
+            <div align="left" style="margin-top:10px;">
+              <input type="button" onClick="SentinelAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
+              <input type="button" onClick="SentinelNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            </div>  
+          </div>  
+        </div>  
+      </div>
+
+      <div align="left" style="display:inline-block; vertical-align:top; margin-left:50px;">
+        <font size = "5"color="#effefe">・INITIATOR</font><br>
+        <div align="left" style="margin-left:22px;">
+          <input type="checkbox" class="Initiator" value="Sova" checked="checked"><font size="3" color="#effefe">Sova</font><br>
+          <input type="checkbox" class="Initiator" value="Breach" checked="checked"><font size="3" color="#effefe">Breach</font><br>
+          <input type="checkbox" class="Initiator" value="Skye" checked="checked"><font size="3" color="#effefe">Skye</font><br>
+          <div align="left" style="margin-left:5px;">
+            <div align="left" style="margin-top:10px;">
+              <input type="button" onClick="InitiatorAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
+              <input type="button" onClick="InitiatorNotAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">UnselectAll</font><br>
+            </div>  
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div align="center" style="margin-top:30px;">
+      <input type="button" value="START" onClick="Start()" style="width:175px; height:45px; background-color:#ff4654; color:#effefe; -webkit-appearance:none;">
+    </br>
+
+    <!-- プロフィール -->
+    <div align="center" style="margin-top:500px;">
+      <hr>
+      <div align="center" style="margin-top:20px;">
+        <img src="Image/EDunity.png" width="200px" height="200px" style="border-radius: 100px;">
+        <br>
+        <font size = "5"color="#effefe">
+          TRI EDunity
         </font>
-    </center>
+        <br>
+        <div align="left" style="margin:5px 0px 10px 0px; width:450px;">
+          <font size = "3"color="#effefe">
+            Valorantで芋帯をうろうろしてるブリム専です。一緒にランク/アンレやってくれるフレンドを募集しています。Valorant/TitanFall2/黒い砂漠
+          </font>
+        </div>
+        <div align="center" style="margin:5px 0px 100px 0px">
+          <a href="https://twitter.com/ValoAddiction" target=”_blank”><img src="Image/Twitter.png" width="40px" height="40px" style="border-radius: 30px;"></a>
+          <a href="https://www.twitch.tv/edunity" target=”_blank”><img src="Image/Twitch.png" width="40px" height="40px" style="border-radius: 30px;"></a>
+        </div>
+      </div>
+    </div>
+    <!-- プロフィール -->
 
+    <script>
+      function DuelistAll()
+      {
+        var DuelistList = document.getElementsByClassName("Duelist");
+        for(i = 0; i < DuelistList.length; i++)
+        {
+          DuelistList[i].checked = true;
+        }
+      }
 
-    <center>
-        <script>
-            var AgentList = new Array
-            (
-            "Image/Jett.png",
-            "Image/Killjoy.png",
-            "Image/Brimstone.png",
-            "Image/Astra.png",
-            "Image/Viper.png",
-            "Image/Sova.png",
-            "Image/Cypher.png",
-            "Image/Phoenix.png",
-            "Image/Yoru.png",
-            "Image/Raze.png",
-            "Image/Skye.png",
-            "Image/Reyna.png",
-            "Image/Omen.png",
-            "Image/Sage.png",
-            "Image/Breach.png" 
-            );
+      function ControllerAll()
+      {
+        var ControllerList = document.getElementsByClassName("Controller");
+        for(i = 0; i < ControllerList.length; i++)
+        {
+          ControllerList[i].checked = true;
+        }
+      }
 
-            var index = Math.floor(Math.random() * AgentList.length);
-            var printHtml = '<img src=' + AgentList[index] + ' width="326px" height="500px" >';
-            document.write(printHtml);
-        </script>
-    </center>
+      function SentinelAll()
+      {
+        var SentinelList = document.getElementsByClassName("Sentinel");
+        for(i = 0; i < SentinelList.length; i++)
+        {
+          SentinelList[i].checked = true;
+        }
+      }
 
-    <br>
+      function InitiatorAll()
+      {
+        var InitiatorList = document.getElementsByClassName("Initiator");
+        for(i = 0; i < InitiatorList.length; i++)
+        {
+          InitiatorList[i].checked = true;
+        }
+      }
 
-    <br>
+      function DuelistNotAll()
+      {
+        var DuelistList = document.getElementsByClassName("Duelist");
+        for(i = 0; i < DuelistList.length; i++)
+        {
+          DuelistList[i].checked = false;
+        }
+      }
 
-    <!-- <center>
-        <font size = "5" color="#FFFFFF">
-            <a href="index.html" style="text-decoration:none;">Start</a>
-        </font>
-    </center> -->
+      function ControllerNotAll()
+      {
+        var ControllerList = document.getElementsByClassName("Controller");
+        for(i = 0; i < ControllerList.length; i++)
+        {
+          ControllerList[i].checked = false;
+        }
+      }
 
-    <center>
-        <input type="button" value="START" onClick="location.href='index.html'" style="width:175px; height:45px; background-color: #ff4654; color:#effefe;"">
-    </center>
+      function SentinelNotAll()
+      {
+        var SentinelList = document.getElementsByClassName("Sentinel");
+        for(i = 0; i < SentinelList.length; i++)
+        {
+          SentinelList[i].checked = false;
+        }
+      }
 
-</body>
+      function InitiatorNotAll()
+      {
+        var InitiatorList = document.getElementsByClassName("Initiator");
+        for(i = 0; i < InitiatorList.length; i++)
+        {
+          InitiatorList[i].checked = false;
+        }
+      }
 
+      function Start()
+      {
+        var AgentList = [];
+
+        var DuelistList = document.getElementsByClassName("Duelist");
+        for(i = 0; i < DuelistList.length; i++)
+        {
+          if(DuelistList[i].checked)
+          {
+            AgentList.push(DuelistList[i].value);
+          }
+        }
+
+        var ControllerList = document.getElementsByClassName("Controller");
+        for(i = 0; i < ControllerList.length; i++)
+        {
+          if(ControllerList[i].checked)
+          {
+            AgentList.push(ControllerList[i].value);
+          }
+        }
+
+        var SentinelList = document.getElementsByClassName("Sentinel");
+        for(i = 0; i < SentinelList.length; i++)
+        {
+          if(SentinelList[i].checked)
+          {
+            AgentList.push(SentinelList[i].value);
+          }
+        }
+
+        var InitiatorList = document.getElementsByClassName("Initiator");
+        for(i = 0; i < InitiatorList.length; i++)
+        {
+          if(InitiatorList[i].checked)
+          {
+            AgentList.push(InitiatorList[i].value);
+          }
+        }
+
+        var Index = Math.floor(Math.random() * AgentList.length);
+
+        var AgentImage = "";
+        var OutPut1 = "";
+
+        var AgentName = "";
+        var OutPut2 = "";
+
+        if(AgentList.length == 0)
+        {
+          AgentImage = "Image/Null.png";
+          OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
+          OutPutHTML1.innerHTML = OutPut1;
+
+          AgentName = "エージェントを選択してください。";
+          OutPut2 = '<br>' + '<font size="3"  color="#effefe">' + AgentName + '</font>';
+          OutPutHTML2.innerHTML = OutPut2;
+        }
+        else
+        {
+          AgentImage = "Image/" + AgentList[Index] + ".png";
+          OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
+          OutPutHTML1.innerHTML = OutPut1;
+
+          AgentName = AgentList[Index];
+          OutPut2 = '<br>' + '<font size="3"  color="#effefe">' + AgentName + '</font>';
+          OutPutHTML2.innerHTML = OutPut2;
+        }
+      }
+    </script>
+  </body>
 </html>
