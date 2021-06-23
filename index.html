@@ -254,16 +254,14 @@
         {
           if(AgentList[Index] == "KAY/O")
           {
-            AgentImage = "Image/" + "KayO" + ".png";
-            OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
-            OutPutHTML1.innerHTML = OutPut1;
+            AgentImage = "Image/" + "Kayo" + ".png";
           }
           else
           {
             AgentImage = "Image/" + AgentList[Index] + ".png";
-            OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
-            OutPutHTML1.innerHTML = OutPut1;
           }
+          OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
+          OutPutHTML1.innerHTML = OutPut1;
 
           AgentName = AgentList[Index];
           OutPut2 = '<br>' + '<font size="3"  color="#effefe">' + AgentName + '</font>';
