@@ -80,6 +80,7 @@
           <input type="checkbox" class="Initiator" value="Sova" checked="checked"><font size="3" color="#effefe">Sova</font><br>
           <input type="checkbox" class="Initiator" value="Breach" checked="checked"><font size="3" color="#effefe">Breach</font><br>
           <input type="checkbox" class="Initiator" value="Skye" checked="checked"><font size="3" color="#effefe">Skye</font><br>
+          <input type="checkbox" class="Initiator" value="KAY/O" checked="checked"><font size="3" color="#effefe">KAY/O</font><br>
           <div align="left" style="margin-left:5px;">
             <div align="left" style="margin-top:10px;">
               <input type="button" onClick="InitiatorAll()" style="width:15px; height:15px; background-color:#ff4654; -webkit-appearance:none;"><font size="3" color="#effefe">SelectAll</font><br>
@@ -107,7 +108,7 @@
         <br>
         <div align="left" style="margin:5px 0px 10px 0px; width:450px;">
           <font size = "3"color="#effefe">
-            Valorantで芋帯をうろうろしてるブリム専です。一緒にランク/アンレやってくれるフレンドを募集しています。Valorant/TitanFall2/黒い砂漠
+            Valorantで芋帯をうろうろしてるブリム専です。最近Twitchでアンレ配信始めました！フォローしてくれると泣いて喜びます！Valorant/TitanFall2/黒い砂漠
           </font>
         </div>
         <div align="center" style="margin:5px 0px 100px 0px">
@@ -251,9 +252,18 @@
         }
         else
         {
-          AgentImage = "Image/" + AgentList[Index] + ".png";
-          OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
-          OutPutHTML1.innerHTML = OutPut1;
+          if(AgentList[Index] == "KAY/O")
+          {
+            AgentImage = "Image/" + "KayO" + ".png";
+            OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
+            OutPutHTML1.innerHTML = OutPut1;
+          }
+          else
+          {
+            AgentImage = "Image/" + AgentList[Index] + ".png";
+            OutPut1 = '<img src=' + AgentImage + ' width="326px" height="500px" style="border:2px solid #ff4654;">';
+            OutPutHTML1.innerHTML = OutPut1;
+          }
 
           AgentName = AgentList[Index];
           OutPut2 = '<br>' + '<font size="3"  color="#effefe">' + AgentName + '</font>';
